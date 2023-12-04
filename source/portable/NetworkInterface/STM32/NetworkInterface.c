@@ -273,14 +273,14 @@ static BaseType_t xSTM32_NetworkInterfaceInitialise( NetworkInterface_t * pxInte
             #endif
 
             #if ( ipconfigUSE_MDNS != 0 )
-                prvMACAddressConfig( &xEthHandle, ( uint8_t * ) xMDNS_MACAddress.ucBytes );
+                prvMACAddressConfig( &xEthHandle, ( uint8_t * ) xMDNS_MacAddress.ucBytes );
                 #if ( ipconfigUSE_IPv6 != 0 )
                     prvMACAddressConfig( &xEthHandle, ( uint8_t * ) xMDNS_MACAddressIPv6.ucBytes );
                 #endif
             #endif
 
             #if ( ipconfigUSE_LLMNR != 0 )
-                prvMACAddressConfig( &xEthHandle, ( uint8_t * ) xLLMNR_MACAddress.ucBytes );
+                prvMACAddressConfig( &xEthHandle, ( uint8_t * ) xLLMNR_MacAddress.ucBytes );
                 #if ( ipconfigUSE_IPv6 != 0 )
                     prvMACAddressConfig( &xEthHandle, ( uint8_t * ) xLLMNR_MacAddressIPv6.ucBytes );
                 #endif
